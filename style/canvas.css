@@ -1,0 +1,18 @@
+.canvas{
+    grid-area: canvas;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    position: relative;
+}
+
+
+
+#layer0, #layer1, #layer2, #layer3, #layer4{
+    position: absolute; 
+    left: 0; top: 0; 
+}
+#layer0 { z-index: 0; }
+#layer1 { z-index: 1; }
+#layer2 { z-index: 2; }
+#layer3 { z-index: 3; }
+#layer4 { z-index: 4; }

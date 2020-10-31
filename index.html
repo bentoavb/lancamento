@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento de Projétil</title>
+    <link rel="stylesheet" href="style/index.css" type="text/css">
+    <link rel="stylesheet" href="style/menu.css" type="text/css">
+    <link rel="stylesheet" href="style/canvas.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="content">
+        
+        <div class="title">
+            <h3>Lançamento de Projétil</h3>
+        </div>
+
+        <div id="tempo">
+        </div>
+
+        <div class="canvas" id="canvas" >
+            <canvas id="layer0"></canvas>
+            <canvas id="layer1"></canvas>
+            <canvas id="layer2"></canvas>
+            <canvas id="layer3"></canvas>
+            <canvas id="layer4"></canvas>
+        </div>
+
+        <div class="menu">
+
+            <div class="menu-options" id='menu-options'>
+                <div>
+                    <span>
+                        <label><p>$v_0\;=\;$</p></label>
+                        <input type="number" id="vel0" name="vel0" size="5" step="5">
+                    </span>
+                    <span>
+                        <label><p>$\theta_0\;=\;$</p></label>
+                        <input type="number" id="theta0" name="theta0" size="5" step="5">
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <label><p>$y_0\;=\;$</p></label>
+                        <input type="number" id="y0" name="y0" size="5" step="10"> 
+                    </span>   
+                    <span>
+                        <label><p>$\beta\;=\;$</p></label>
+                        <input type="number" id="beta" name="beta" size="5" step="0.05">
+                    </span>   
+                </div>         
+            </div>
+
+            <div class="menu-buttons">
+
+                <button id="button1">Lançar</button>
+                <button id="button2">Limpar tela</button>
+                <button id="button3">Opções</button>
+                <a href="help.html" target="_blank" >
+                    <button id="button4">
+                        Ajuda <i class="fas fa-question-circle"></i>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="script/index.js"></script>
+    <script type="text/javascript" src="script/Prototipos/Layer.js"></script>
+    <script type="text/javascript" src="script/Prototipos/Objeto.js"></script>
+    <script type="text/javascript" src="script/Prototipos/Nuvem.js"></script>
+    <script type="text/javascript" src="script/Prototipos/Particula.js"></script>
+    <script type="text/javascript" src="script/Prototipos/LaunchArrow.js"></script>
+    <script type="text/javascript" src="script/Layers/layer0.js"></script>
+    <script type="text/javascript" src="script/Layers/layer1.js"></script>
+    <script type="text/javascript" src="script/Layers/layer2.js"></script>
+    <script type="text/javascript" src="script/Layers/layer3.js"></script>
+    <script type="text/javascript" src="script/Layers/layer4.js"></script>
+    <script type="text/javascript" src="script/lancamento.js"></script>
+    <script type="text/javascript" src="script/menu.js"></script>
+
+    <!-- MathJax scripts -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
