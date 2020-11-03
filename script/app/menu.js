@@ -63,7 +63,7 @@ let sidemenu = false;
 
 document.getElementById("button3").onclick = function openNav() {
     sidemenu = true;
-    document.getElementById("menu-options").style.width = "190px";
+    document.getElementById("menu-options").style.width = "75%";
 }
 
 document.getElementById("canvas").onclick =  function closeNav() {
