@@ -11,8 +11,8 @@
     position: absolute; 
     left: 0; top: 0; 
 }
-#layer0 { z-index: 0; }
-#layer1 { z-index: 1; }
+#layer0 { z-index: 1; }
+#layer1 { z-index: 0; }
 #layer2 { z-index: 2; }
 #layer3 { z-index: 3; }
 #layer4 { z-index: 4; }

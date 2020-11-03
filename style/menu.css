@@ -12,7 +12,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid black;
     padding: 0 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
@@ -59,7 +58,6 @@
         margin-left: 10px;
     }
     .menu-options {
-        border: none;
         border-radius: 0;
         padding: 0;
         height: 100%;
