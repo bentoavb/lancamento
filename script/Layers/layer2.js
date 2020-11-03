@@ -2,10 +2,12 @@
 
 layer2 = new Layer("layer2");
 
-document.fonts.ready.then(_ => {
+document.fonts.ready.then(_ => configLayer2());
+
+function configLayer2() {
     layer2.context.font = '600 20px "Font Awesome 5 Free"';
     layer2.context.fillStyle = "black";
-});
+}
 
 let p2 = null;
 

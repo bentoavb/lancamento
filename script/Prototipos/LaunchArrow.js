@@ -47,9 +47,9 @@ LaunchArrow.prototype.draw = function (layer, angle=null, x=null, y=null){
         let dy = this.raio*Math.sin(i*Math.PI/180);
         layer.context.beginPath();
         layer.context.fillStyle = "black";
-        layer.context.moveTo(x0 + 1.0*dx, h - y0 - 1.0*dy);
-        layer.context.lineTo(x0 + 1.1*dx, h - y0 - 1.1*dy);
-        layer.context.fillText(i, x0 + 1.15*dx, h - y0 - 1.15*dy);
+        layer.context.moveTo(1.0*dx, h - this.y - 1.0*dy);
+        layer.context.lineTo(1.1*dx, h - this.y - 1.1*dy);
+        layer.context.fillText(i, 1.15*dx, h - this.y - 1.15*dy);
         layer.context.stroke(); 
     }
 

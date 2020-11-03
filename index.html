@@ -50,19 +50,26 @@
                         <label><p>$\beta\;=\;$</p></label>
                         <input type="number" id="beta" name="beta" size="5" step="0.05">
                     </span>   
-                </div>         
+                </div>
+                <div>
+                    <span>
+                        <label for="points">Zoom: </label>
+                        <input type="range" id="zoom" name="zoom" size="2" min="1" max="3" step="0.1"> 
+                    </span>
+                    <span id="help-span">
+                        <a href="help.html" target="_blank" >
+                            <button id="button4">
+                                Ajuda <i class="fas fa-question-circle"></i>
+                            </button>
+                        </a>
+                    </span>
+                </div>
             </div>
 
             <div class="menu-buttons">
-
                 <button id="button1">Lançar</button>
                 <button id="button2">Limpar tela</button>
                 <button id="button3">Opções</button>
-                <a href="help.html" target="_blank" >
-                    <button id="button4">
-                        Ajuda <i class="fas fa-question-circle"></i>
-                    </button>
-                </a>
             </div>
 
         </div>
@@ -91,7 +98,6 @@
           }
         };
     </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>

@@ -9,7 +9,7 @@ function Particula(x0, y0, velx0, vely0, tipo) {
 
 Particula.prototype.draw = function (context, angle, color){
     context.save();
-    context.translate(this.x, h - this.y);
+    context.translate(this.x/zoom, h - this.y/zoom);
     context.rotate(angle);
 
     context.fillStyle = color;
@@ -27,7 +27,7 @@ Particula.prototype.draw = function (context, angle, color){
 }
 
 
-Particula.prototype.update = function (context, t, t_final, color){
+Particula.prototype.update = function (context, t, color){
 
     let vx, vy;
 

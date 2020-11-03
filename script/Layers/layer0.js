@@ -2,36 +2,39 @@
 
 layer0 = new Layer("layer0");
 
-w = layer0.canvas.width;
-h = layer0.canvas.height;
+document.fonts.ready.then(_ => configLayer0());
 
-document.fonts.ready.then(_ => {
+function configLayer0() {
 
     let ctx = layer0.context;
 
+    ctx.clearRect(0, 0, w, h);
+
     let R = 50;
 
-    for (let i = 1; i < w/R; i++) {
+    ctx.beginPath();
+
+    for (let i = 1; i < zoom*w/R; i++) {
         
-        ctx.moveTo(i*R,h);
-        ctx.lineTo(i*R,h-10);
+        ctx.moveTo(i*R/zoom,h);
+        ctx.lineTo(i*R/zoom,h-10);
 
         ctx.save();
-        ctx.translate(i*R,h-15);
+        ctx.translate(i*R/zoom,h-15);
         ctx.rotate(-Math.PI/2);
         ctx.fillText(i*R, -13, -5);
         ctx.restore(); 
         
     }
 
-    for (let i = 1; i < h/R; i++) {
+    for (let i = 1; i < zoom*h/R; i++) {
         
-        ctx.moveTo(0,h-i*R);
-        ctx.lineTo(10,h-i*R);
-        ctx.fillText(i*R, 2, h-i*R-5);
+        ctx.moveTo(0,h-i*R/zoom);
+        ctx.lineTo(10,h-i*R/zoom);
+        ctx.fillText(i*R, 2, h-i*R/zoom-5);
         
     }
 
     ctx.stroke();
-    
-});
+
+}

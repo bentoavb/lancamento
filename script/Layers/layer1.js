@@ -1,10 +1,11 @@
 // LAYER DAS NUVENS
 
 layer1 = new Layer("layer1");
+layer1Timer = null;
 
 document.fonts.ready.then(_ => {
-    layer1.context.font = '600 70px "Font Awesome 5 Free"';
-    layer1.context.fillStyle = "#aaaaff";
+    
+    configLayer1();
 
     layer1.context.fillRect(0,0,100,100);
 
@@ -19,7 +20,7 @@ document.fonts.ready.then(_ => {
         ))
     }
 
-    setInterval(() => {
+    layer1Timer = setInterval(() => {
         layer1.context.clearRect(0, 0, layer1.canvas.width, layer1.canvas.height);
         for (let i = 0; i < array.length; i++) {
             array[i].update(layer1.context);
@@ -28,3 +29,7 @@ document.fonts.ready.then(_ => {
 
 });
 
+function configLayer1() {
+    layer1.context.font = '600 70px "Font Awesome 5 Free"';
+    layer1.context.fillStyle = "#aaaaff";
+}
