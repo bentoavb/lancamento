@@ -32,7 +32,7 @@
     align-items: center;
 }
 
-#button1 {
+#button1, #button2 {
     margin-right: 10px;
 }
 
@@ -58,7 +58,7 @@
 @media only screen and (max-width: 700px) {
     #button3{
         display: block;
-        margin-left: 10px;
+        margin-right: 10px;
     }
     .menu-options {
         border-radius: 0;
@@ -78,8 +78,5 @@
     }
     .menu-options div {
         margin-right: 0px;
-    }
-    #help-span{
-        margin-top: 50px;
     }
 }
