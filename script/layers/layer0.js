@@ -10,7 +10,7 @@ function configLayer0() {
 
     ctx.clearRect(0, 0, w, h);
 
-    let R = 50;
+    let R = 50 + 50*parseInt((zoom - 1)/2);
 
     ctx.beginPath();
 

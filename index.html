@@ -53,8 +53,13 @@
                 </div>
                 <div>
                     <span>
-                        <label for="points">Zoom: </label>
-                        <input type="range" id="zoom" name="zoom" size="2" min="1" max="3" step="0.1"> 
+                        <label for="points"><p>Zoom: <span id="zoom-value"></span></p></label>
+                        <button id="zoom-minus">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                        <button id="zoom-plus">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
                     </span>
                     <span id="help-span">
                         <a href="help.html" target="_blank" >

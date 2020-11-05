@@ -75,10 +75,24 @@ document.getElementById("canvas").onclick =  function closeNav() {
 
 // ZOOM DA TELA
 
-document.getElementById('zoom').value = zoom;
-document.getElementById('zoom').oninput = function(e){
-    zoom = parseFloat(e.target.value);
+document.getElementById('zoom-value').innerHTML = zoom.toFixed(1);
+
+document.getElementById("zoom-minus").onclick = function zoomMinus() {
+    zoom -= 0.5;
+    if (zoom < 0.5){
+        zoom = 0.5;
+    }
+
     configLayer0();
     redesenharLayer3();
     arrow.draw(layer4, angle=alpha*Math.PI/180, x=0, y=y0/zoom);
-};
+    document.getElementById('zoom-value').innerHTML = zoom.toFixed(1);
+}
+
+document.getElementById("zoom-plus").onclick = function zoomPlus() {
+    zoom += 0.5;
+    document.getElementById('zoom-value').innerHTML = zoom.toFixed(1);
+    configLayer0();
+    redesenharLayer3();
+    arrow.draw(layer4, angle=alpha*Math.PI/180, x=0, y=y0/zoom);
+}

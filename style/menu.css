@@ -45,16 +45,15 @@
     color: black;
 }
 
-#zoom {
-    width: 75px;
-}
-#help-span{
-    margin-top: 30px;
-}
-
 #vel0, #y0, #theta0, #beta {
     width: 50px;
 }
+
+#zoom-minus {
+    margin: 0 10px;
+}
+
+
 
 @media only screen and (max-width: 700px) {
     #button3{
