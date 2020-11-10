@@ -10,7 +10,7 @@ document.getElementById('y0').oninput = function(e){
     }else{
         y0 = parseInt(e.target.value);
     }
-    arrow.draw(layer4, angle=alpha*Math.PI/180, x=0, x=y0*zoom);
+    arrow.draw(layer4, angle=alpha*Math.PI/180, x=0, x=y0/zoom);
 };
 
 // VELOCIDADE INICIAL DA PARTICULA
@@ -33,7 +33,7 @@ document.getElementById('theta0').oninput = function(e){
     }else{
         alpha = parseInt(e.target.value);
     }
-    arrow.draw(layer4, angle=alpha*Math.PI/180, x=0, x=y0*zoom);
+    arrow.draw(layer4, angle=alpha*Math.PI/180);
 };
 
 
